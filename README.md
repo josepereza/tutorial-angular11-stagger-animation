@@ -11,16 +11,15 @@ Para crear un efecto de fade-in con stagger (aparición gradual en serie) en Ang
 
     En el archivo app.module.ts, agrega BrowserAnimationsModule a la lista de importaciones y a @NgModule.imports.
     
-    ```
+```
     import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [BrowserAnimationsModule],
-  ...
+ 
 })
 export class AppModule { }
-
-    ```
+```
     En el componente donde quieres aplicar el efecto de fade-in con stagger, importa el módulo @angular/animations y define el estado y la transición de animación en el archivo de componente. Por ejemplo:
     
 ...
