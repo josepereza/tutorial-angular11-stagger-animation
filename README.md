@@ -8,9 +8,10 @@ Note: moved [@listAnimation]="items.length" from the container div to a new div 
 Para crear un efecto de fade-in con stagger (aparición gradual en serie) en Angular utilizando la biblioteca de animaciones de Angular, debes seguir los mismos pasos que en las respuestas anteriores, pero con algunas modificaciones en el código de animación.
 
     Asegúrate de tener instalado el módulo @angular/animations en tu proyecto Angular. Si no lo tienes instalado, ejecuta npm install --save @angular/animations.
-
     En el archivo app.module.ts, agrega BrowserAnimationsModule a la lista de importaciones y a @NgModule.imports.
-    
+
+
+
 ```
     import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
