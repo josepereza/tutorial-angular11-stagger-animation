@@ -50,7 +50,7 @@ export class MyComponentComponent { ... }
 
 En este ejemplo, hemos definido una transición que se aplica a cualquier cambio de estado y que consiste en una consulta a todos los elementos que entran en el estado (:enter). Estos elementos tienen una opacidad inicial de 0 y un desplazamiento vertical inicial de -15px. Luego, se aplica un stagger de 100ms entre cada elemento y se anima la opacidad y el desplazamiento vertical durante 600ms para que vuelvan a su estado inicial.
 
-    En la etiqueta HTML donde quieres aplicar el efecto de fade-in con stagger, agrega la directiva [@fadeInStagger] a cada elemento que quieras que tenga el efecto. Por ejemplo:
+En la etiqueta HTML donde quieres aplicar el efecto de fade-in con stagger, agrega la directiva [@fadeInStagger] a cada elemento que quieras que tenga el efecto. Por ejemplo:
     
 ```
 
