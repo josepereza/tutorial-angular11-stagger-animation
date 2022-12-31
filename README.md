@@ -22,7 +22,8 @@ export class AppModule { }
 ```
     En el componente donde quieres aplicar el efecto de fade-in con stagger, importa el módulo @angular/animations y define el estado y la transición de animación en el archivo de componente. Por ejemplo:
     
-...
+```
+
 import { trigger, state, transition, style, animate, query, stagger } from '@angular/animations';
 
 @Component({
@@ -50,9 +51,11 @@ En este ejemplo, hemos definido una transición que se aplica a cualquier cambio
 
     En la etiqueta HTML donde quieres aplicar el efecto de fade-in con stagger, agrega la directiva [@fadeInStagger] a cada elemento que quieras que tenga el efecto. Por ejemplo:
     
-...
+```
+
 <div [@fadeInStagger]>
   <div>Elemento 1</div>
   <div>Elemento 2</div>
 
-...
+```
+
