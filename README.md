@@ -59,4 +59,56 @@ En la etiqueta HTML donde quieres aplicar el efecto de fade-in con stagger, agre
   <div>Elemento 2</div>
 
 ```
+## Tutorial fadeIn
+Para crear un efecto de fade-in (aparición gradual) en Angular utilizando la biblioteca de animaciones de Angular, debes seguir los siguientes pasos:
 
+Asegúrate de tener instalado el módulo @angular/animations en tu proyecto Angular. Si no lo tienes instalado, ejecuta npm install --save @angular/animations.
+
+En el archivo app.module.ts, agrega BrowserAnimationsModule a la lista de importaciones y a @NgModule.imports.
+
+
+```
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+@NgModule({
+  imports: [BrowserAnimationsModule],
+
+})
+export class AppModule { }
+
+
+```
+
+En el componente donde quieres aplicar el efecto de fade-in, importa el módulo @angular/animations y define el estado y la transición de animación en el archivo de componente. Por ejemplo:
+
+```
+import { trigger, state, transition, style, animate } from '@angular/animations';
+
+@Component({
+  selector: 'app-my-component',
+  templateUrl: './my-component.component.html',
+  styleUrls: ['./my-component.component.css'],
+  animations: [
+    trigger('fadeIn', [
+      state('in', style({opacity: 1})),
+      transition(':enter', [
+        style({opacity: 0}),
+        animate(600)
+      ])
+    ])
+  ]
+})
+export class MyComponentComponent { ... }
+
+```
+
+En la etiqueta HTML donde quieres aplicar el efecto de fade-in, agrega la directiva [@fadeIn] y establece el estado de animación en 'in' cuando quieras que se active el efecto de fade-in. Por ejemplo:
+
+
+```
+<div [@fadeIn]="'in'">
+  Contenido que se mostrará con un efecto de fade-in
+</div>
+
+
+```
